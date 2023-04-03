@@ -1,7 +1,7 @@
 import requests
 import datetime as dt
 import secret
-from send_mail import send_email
+from Files import send_mail
 
 def stocks_and_news():
     STOCK_NAME = "AAPL"
@@ -74,4 +74,4 @@ def stocks_and_news():
 
 
     for _ in range(3):
-        send_email(secret.MAIL_EMAIL, f"{titles[_]}", f"{descriptions[_]}\n\nURL: {urls[_]}")
+        send_mail.send_email(secret.MAIL_EMAIL, f"{titles[_]}", f"{descriptions[_]}\n\nURL: {urls[_]}")

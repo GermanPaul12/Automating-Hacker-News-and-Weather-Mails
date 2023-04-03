@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-from send_mail import send_email
+from Files import send_mail
 import secret
 
 def hacker_news():
@@ -26,7 +26,7 @@ def hacker_news():
     titles_list = [title.text for title in titles]
     title_with_highest_points = titles_list[index_highest_points]
 
-    send_email(secret.PERSONAL_EMAIL, 'Hacker News for German from German', f"Hey German,\n\n{title_with_highest_points} is todays title with the highest points it has {highest_points} points! The link to this post is: {link_with_hihgest_points}\n\nLiebe Grüße\nGerman")
+    send_mail.send_email(secret.PERSONAL_EMAIL, 'Hacker News for German from German', f"Hey German,\n\n{title_with_highest_points} is todays title with the highest points it has {highest_points} points! The link to this post is: {link_with_hihgest_points}\n\nLiebe Grüße\nGerman")
 
 if __name__ == "__main__":
     hacker_news()    

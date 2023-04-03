@@ -1,7 +1,7 @@
 import requests
 import yagmail
 import secret
-from send_mail import send_email
+from Files import send_mail
 
 def rain_checker():
     #Leimen
@@ -25,9 +25,9 @@ def rain_checker():
             will_rain = True
 
     if will_rain:
-        send_email(secret.ANGI_EMAIL, "Wetterbericht für Leimen! von German Paul☔️️", "Hey Angi,\n\nEs wird heute in Leimen regnen, daher solltest du einen Regenschirm mitnehmen!\n\nLiebe Grüße\nGermi💌")
-        send_email(secret.PERSONAL_EMAIL, "Wetterbericht für Leimen! von German Paul☔️️", "Hey German,\n\nEs wird heute in Leimen regnen, daher solltest du einen Regenschirm mitnehmen!\n\nLiebe Grüße\nGerman💌")
-        send_email(secret.MAMA_EMAIL, "Wetterbericht für Leimen! von German Paul☔️️", "Hey Mama,\n\nEs wird heute in Leimen regnen, daher solltest du einen Regenschirm mitnehmen!\n\nLiebe Grüße\nGerman💌")
+        send_mail.send_email(secret.ANGI_EMAIL, "Wetterbericht für Leimen! von German Paul☔️️", "Hey Angi,\n\nEs wird heute in Leimen regnen, daher solltest du einen Regenschirm mitnehmen!\n\nLiebe Grüße\nGermi💌")
+        send_mail.send_email(secret.PERSONAL_EMAIL, "Wetterbericht für Leimen! von German Paul☔️️", "Hey German,\n\nEs wird heute in Leimen regnen, daher solltest du einen Regenschirm mitnehmen!\n\nLiebe Grüße\nGerman💌")
+        send_mail.send_email(secret.MAMA_EMAIL, "Wetterbericht für Leimen! von German Paul☔️️", "Hey Mama,\n\nEs wird heute in Leimen regnen, daher solltest du einen Regenschirm mitnehmen!\n\nLiebe Grüße\nGerman💌")
     #Mannheim
     weather_parameters = {
         "lat":secret.MA_LAT,
@@ -49,7 +49,7 @@ def rain_checker():
             will_rain = True
 
     if will_rain:
-        send_email(secret.PERSONAL_EMAIL, "Wetterbericht für Mannheim! von German Paul☔️️", "Hey German,\n\nEs wird heute in Mannheim regnen, daher solltest du einen Regenschirm mitnehmen!\n\nLiebe Grüße\nGerman💌")
+        send_mail.send_email(secret.PERSONAL_EMAIL, "Wetterbericht für Mannheim! von German Paul☔️️", "Hey German,\n\nEs wird heute in Mannheim regnen, daher solltest du einen Regenschirm mitnehmen!\n\nLiebe Grüße\nGerman💌")
 
 if __name__ == "__main__":
     rain_checker()
