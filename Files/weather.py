@@ -1,6 +1,6 @@
 import requests
 import yagmail
-from .. import secret
+import secret
 from send_mail import send_email
 
 def rain_checker():

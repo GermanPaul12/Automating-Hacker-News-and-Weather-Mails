@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from send_mail import send_email
-from .. import secret
+import secret
 
 def hacker_news():
     url = "https://news.ycombinator.com/"

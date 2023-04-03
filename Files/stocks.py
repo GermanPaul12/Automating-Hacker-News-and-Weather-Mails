@@ -1,6 +1,6 @@
 import requests
 import datetime as dt
-from .. import secret
+import secret
 from send_mail import send_email
 
 def stocks_and_news():
