@@ -27,8 +27,8 @@ def rain_checker():
 
     if will_rain:
         #send_mail.send_email(secret.ANGI_EMAIL, "Wetterbericht für Leimen! von German Paul☔️️", "Hey Angi,\n\nEs wird heute in Leimen regnen, daher solltest du einen Regenschirm mitnehmen!\n\nLiebe Grüße\nGermi💌")
-        send_mail.send_email(secret.PERSONAL_EMAIL, "Wetterbericht für Leimen! von German Paul☔️️", "Hey German,\n\nEs wird heute in Leimen regnen, daher solltest du einen Regenschirm mitnehmen!\n\nLiebe Grüße\nGerman💌")
-        #send_mail.send_email(secret.MAMA_EMAIL, "Wetterbericht für Leimen! von German Paul☔️️", "Hey Mama,\n\nEs wird heute in Leimen regnen, daher solltest du einen Regenschirm mitnehmen!\n\nLiebe Grüße\nGerman💌")
+        #send_mail.send_email(secret.PERSONAL_EMAIL, "Wetterbericht für Leimen! von German Paul☔️️", "Hey German,\n\nEs wird heute in Leimen regnen, daher solltest du einen Regenschirm mitnehmen!\n\nLiebe Grüße\nGerman💌")
+        send_mail.send_email(secret.MAMA_EMAIL, "Wetterbericht für Leimen! von German Paul☔️️", "Hey Mama,\n\nEs wird heute in Leimen regnen, daher solltest du einen Regenschirm mitnehmen!\n\nLiebe Grüße\nGerman💌")
     #Mannheim
     weather_parameters = {
         "lat":secret.MA_LAT,
@@ -44,7 +44,7 @@ def rain_checker():
     weather_data = response.json()
 
     will_rain = False
-    #print(weather_data)
+    print(weather_data)
     for index in range(23):
         
         with open("weather.csv", "a+") as f:
