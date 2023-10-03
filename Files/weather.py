@@ -1,5 +1,4 @@
 import requests
-import yagmail
 import secret
 from Files import send_mail
 
