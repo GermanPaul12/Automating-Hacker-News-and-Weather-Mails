@@ -28,7 +28,7 @@ def rain_checker():
         #send_mail.send_email(secret.ANGI_EMAIL, "Wetterbericht für Leimen! von German Paul☔️️", "Hey Angi,\n\nEs wird heute in Leimen regnen, daher solltest du einen Regenschirm mitnehmen!\n\nLiebe Grüße\nGermi💌")
         #send_mail.send_email(secret.PERSONAL_EMAIL, "Wetterbericht für Leimen! von German Paul☔️️", "Hey German,\n\nEs wird heute in Leimen regnen, daher solltest du einen Regenschirm mitnehmen!\n\nLiebe Grüße\nGerman💌")
         send_mail.send_email(secret.MAMA_EMAIL, "Wetterbericht für Leimen! von German Paul☔️️", "Hey Mama,\n\nEs wird heute in Leimen regnen, daher solltest du einen Regenschirm mitnehmen!\n\nLiebe Grüße\nGerman💌")
-    #Mannheim
+    #MA
     weather_parameters = {
         "lat":secret.MA_LAT,
         "lon":secret.MA_LNG,

@@ -1,6 +1,7 @@
-# Daily-Mail-PythonAnywhere
+# Automation Project for HackerNews and Weather Warning Mails
 
-### This is a project i host on pythonanywhere. It sends mails at a chosen time to the topics:
+## This is a project i host on pythonanywhere. It sends mails at a chosen time to the topics
+
 1. Will it rain in the next 14 hours
 2. What is the article with the most likes on HackerNews today
 3. What is the price of apple and what are the top 3 articles of today about Apple
